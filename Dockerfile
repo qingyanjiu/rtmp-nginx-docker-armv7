@@ -22,6 +22,8 @@ RUN make install
 
 COPY nginx.conf /nginx-1.2.4/conf/nginx.conf
 
+COPY stat.xsl /usr/local/nginx/html
+
 RUN chmod 777 /usr/local/nginx/html 
 
 CMD /usr/local/nginx/sbin/nginx -c /nginx-1.2.4/conf/nginx.conf
